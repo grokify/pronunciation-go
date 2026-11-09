@@ -1,0 +1,63 @@
+{
+  "irVersion": "1.0",
+  "project": "pronunciation-go",
+  "repository": "https://github.com/grokify/pronunciation-go",
+  "versioning": "semver",
+  "commitConvention": "conventional",
+  "maintainers": [
+    "grokify",
+    "johncwang@gmail.com"
+  ],
+  "releases": [
+    {
+      "version": "v0.1.0",
+      "date": "2026-11-09",
+      "highlights": [
+        {
+          "description": "`respell` turns IPA and dictionary respellings, as Wikipedia writes them, into respellings a plain-text speech engine reads as intended"
+        },
+        {
+          "description": "Several candidate respellings per word to play and choose from, since voices read unfamiliar words by their own rules"
+        }
+      ],
+      "added": [
+        {
+          "description": "`FromIPA` reads IPA into syllables with stress: stress marks and breaks start syllables, the longest legal English onset goes to the next syllable, affricates and diphthongs are joined, doubled consonants collapsed",
+          "commit": "d6684f3"
+        },
+        {
+          "description": "`Word.Respelling` writes syllables in the style of Wikipedia's pronunciation respelling key, stressed syllables in capitals, as in LAM-bər-GHEE-nee",
+          "commit": "d6684f3"
+        },
+        {
+          "description": "IPA in other languages (Italian, Spanish, French, German and more) brought to the nearest English sounds: pure vowels written long, nasal vowels with an n",
+          "commit": "8bbf330"
+        },
+        {
+          "description": "`FromRespelling` reads a hyphenated respelling such as LAM-bər-GHEE-nee back into syllables",
+          "commit": "8bbf330"
+        },
+        {
+          "description": "`Candidates` writes a word's sounds up to `MaxCandidates` ways: as one word, split where the stress falls, syllable by syllable, with simpler endings and with a consonant cluster split",
+          "commit": "116c97c"
+        },
+        {
+          "description": "`Suggest` reads text as Wikipedia writes it: English IPA between slashes, bracketed IPA in the language named before it (`Languages`), and hyphenated respellings, returning a `Suggestion` per word",
+          "commit": "116c97c"
+        }
+      ],
+      "tests": [
+        {
+          "description": "Tests for IPA syllables, respellings, candidates and Wikipedia text in several languages",
+          "commit": "c64943c"
+        }
+      ],
+      "documentation": [
+        {
+          "description": "README with usage and examples",
+          "commit": "3ff4318"
+        }
+      ]
+    }
+  ]
+}
