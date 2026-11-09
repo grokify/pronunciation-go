@@ -1,0 +1,7 @@
+*.tar
+*.tar.bz2
+*.tar.gz
+.DS_Store
+_*
+coverage.out
+coverage.html
